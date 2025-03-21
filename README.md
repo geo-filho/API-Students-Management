@@ -1,62 +1,59 @@
-# Santander Dev Week 2023
+# Sistema de Gerenciamento de Estudantes 🎓
 
-Java RESTful API criada para a Santander Dev Week.
+Projeto desenvolvido durante um curso da **DIO (Digital Innovation One)**, com o objetivo de aprender **Java** e as tecnologias para o desenvolvimento de sistemas back-end utilizando **Spring Boot**, **PostgreSQL** e outras ferramentas modernas.
 
-## Principais Tecnologias
- - **Java 17**: Utilizaremos a versão LTS mais recente do Java para tirar vantagem das últimas inovações que essa linguagem robusta e amplamente utilizada oferece;
- - **Spring Boot 3**: Trabalharemos com a mais nova versão do Spring Boot, que maximiza a produtividade do desenvolvedor por meio de sua poderosa premissa de autoconfiguração;
- - **Spring Data JPA**: Exploraremos como essa ferramenta pode simplificar nossa camada de acesso aos dados, facilitando a integração com bancos de dados SQL;
- - **OpenAPI (Swagger)**: Vamos criar uma documentação de API eficaz e fácil de entender usando a OpenAPI (Swagger), perfeitamente alinhada com a alta produtividade que o Spring Boot oferece;
- - **Railway**: facilita o deploy e monitoramento de nossas soluções na nuvem, além de oferecer diversos bancos de dados como serviço e pipelines de CI/CD.
+## Sobre o Projeto 📚  
+O Sistema de Gerenciamento de Estudantes foi criado para permitir o cadastro, consulta, atualização e exclusão de informações de estudantes, com foco no gerenciamento de dados acadêmicos e pessoais. A aplicação oferece uma interface simples para gerenciar os registros dos estudantes, incluindo informações como matrícula, desempenho e atividades.
 
-## [Link do Figma](https://www.figma.com/file/0ZsjwjsYlYd3timxqMWlbj/SANTANDER---Projeto-Web%2FMobile?type=design&node-id=1421%3A432&mode=design&t=6dPQuerScEQH0zAn-1)
+## Funcionalidades 🔧  
+- **Cadastro de Estudantes**: Permite adicionar novos estudantes ao sistema com dados de matrícula e informações acadêmicas.  
+- **Edição de Dados**: Atualiza informações dos estudantes, como desempenho e dados pessoais.  
+- **Exclusão de Estudantes**: Permite remover registros de estudantes do sistema.  
+- **Listagem de Estudantes**: Exibe todos os estudantes cadastrados para facilitar a consulta de suas informações.  
 
-O Figma foi utilizado para a abstração do domínio desta API, sendo útil na análise e projeto da solução.
+## Tecnologias Utilizadas 🚀  
+- **Spring Boot**: Framework Java utilizado para o desenvolvimento do back-end e criação da API RESTful.  
+- **PostgreSQL**: Banco de dados relacional para persistir as informações dos estudantes.  
+- **JPA (Hibernate)**: Mapeamento objeto-relacional para integrar a aplicação com o banco de dados.  
+- **Spring Data**: Repositório para acessar os dados de forma eficiente e simplificada.
 
-## Diagrama de Classes (Domínio da API)
+Este projeto foi desenvolvido para aprimorar o conhecimento em desenvolvimento back-end com **Java** e **Spring Boot**, além de garantir um entendimento prático do uso de bancos de dados relacionais como **PostgreSQL**.
+
 
 ```mermaid
 classDiagram
-  class User {
+  class Student {
     -String name
-    -Account account
-    -Feature[] features
-    -Card card
-    -News[] news
+    -SchoolInfo schoolInfo
+    -Performance performance
+    -Activity[] activities
+    -Announcement[] announcements
   }
 
-  class Account {
-    -String number
-    -String agency
-    -Number balance
-    -Number limit
+  class SchoolInfo {
+    -String registrationNumber
+    -String schoolName
+    -String grade
+    -String classroom
   }
 
-  class Feature {
+  class Performance {
+    -Number averageGrade
+    -Number attendancePercentage
+  }
+
+  class Activity {
     -String icon
     -String description
   }
 
-  class Card {
-    -String number
-    -Number limit
-  }
-
-  class News {
+  class Announcement {
     -String icon
     -String description
   }
 
-  User "1" *-- "1" Account
-  User "1" *-- "N" Feature
-  User "1" *-- "1" Card
-  User "1" *-- "N" News
+  Student "1" *-- "1" SchoolInfo
+  Student "1" *-- "1" Performance
+  Student "1" *-- "N" Activity
+  Student "1" *-- "N" Announcement
 ```
-
-## IMPORTANTE
-
-Este projeto foi construído com um viés totalmente educacional para a DIO. Por isso, disponibilizamos uma versão mais robusta dele no repositório oficial da DIO:
-
-### [digitalinnovationone/santander-dev-week-2023-api](https://github.com/digitalinnovationone/santander-dev-week-2023-api)
-
-Lá incluímos todas os endpoints de CRUD, além de aplicar boas práticas (uso de DTOs e refinamento na documentação da OpenAPI). Sendo assim, caso queira um desafio/referência mais completa é só acessar 👊🤩
