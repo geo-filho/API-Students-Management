@@ -1,23 +1,23 @@
-# Sistema de Gerenciamento de Estudantes 🎓
+# API de Gerenciamento de Estudantes 🎓
 
-Projeto desenvolvido durante um curso da **DIO (Digital Innovation One)**, com o objetivo de aprender **Java** e as tecnologias para o desenvolvimento de sistemas back-end utilizando **Spring Boot**, **PostgreSQL** e outras ferramentas modernas.
+Projeto desenvolvido durante um curso da **DIO (Digital Innovation One)**, com o objetivo de aprender **Java** e as tecnologias para o desenvolvimento de sistemas back-end utilizando **Spring Boot**, **PostgreSQL** e outras ferramentas associadas.
 
 ## Sobre o Projeto 📚  
-O Sistema de Gerenciamento de Estudantes foi criado para permitir o cadastro, consulta, atualização e exclusão de informações de estudantes, com foco no gerenciamento de dados acadêmicos e pessoais. A aplicação oferece uma interface simples para gerenciar os registros dos estudantes, incluindo informações como matrícula, desempenho e atividades.
+A **API de Gerenciamento de Estudantes** permite realizar o cadastro, consulta, atualização e exclusão de informações dos estudantes, como dados acadêmicos e de matrícula. O sistema utiliza **Spring Boot** para o desenvolvimento da lógica do back-end e **PostgreSQL** para persistir as informações.
 
 ## Funcionalidades 🔧  
-- **Cadastro de Estudantes**: Permite adicionar novos estudantes ao sistema com dados de matrícula e informações acadêmicas.  
-- **Edição de Dados**: Atualiza informações dos estudantes, como desempenho e dados pessoais.  
-- **Exclusão de Estudantes**: Permite remover registros de estudantes do sistema.  
-- **Listagem de Estudantes**: Exibe todos os estudantes cadastrados para facilitar a consulta de suas informações.  
+- **Cadastro de Estudantes**: Permite adicionar novos estudantes à base de dados com informações de matrícula, escola e desempenho.  
+- **Edição de Dados**: Atualiza as informações dos estudantes, como o desempenho acadêmico e dados de matrícula.  
+- **Exclusão de Estudantes**: Remove os registros dos estudantes do banco de dados.  
+- **Listagem de Estudantes**: Retorna todos os estudantes cadastrados no sistema.  
 
 ## Tecnologias Utilizadas 🚀  
-- **Spring Boot**: Framework Java utilizado para o desenvolvimento do back-end e criação da API RESTful.  
-- **PostgreSQL**: Banco de dados relacional para persistir as informações dos estudantes.  
-- **JPA (Hibernate)**: Mapeamento objeto-relacional para integrar a aplicação com o banco de dados.  
-- **Spring Data**: Repositório para acessar os dados de forma eficiente e simplificada.
+- **Spring Boot**: Framework para o desenvolvimento do back-end e criação da API RESTful.  
+- **PostgreSQL**: Banco de dados relacional utilizado para persistir as informações dos estudantes.  
+- **JPA (Hibernate)**: Utilizado para mapear os dados entre o modelo de objetos Java e o banco de dados.  
+- **Spring Data JPA**: Repositório que facilita o acesso aos dados, com consultas otimizadas ao banco de dados.
 
-Este projeto foi desenvolvido para aprimorar o conhecimento em desenvolvimento back-end com **Java** e **Spring Boot**, além de garantir um entendimento prático do uso de bancos de dados relacionais como **PostgreSQL**.
+Este projeto foi desenvolvido para aprimorar o conhecimento em desenvolvimento de **APIs** com **Java** e **Spring Boot**, além de trabalhar com **PostgreSQL** para persistir dados de forma eficiente.
 
 
 ```mermaid
